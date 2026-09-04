@@ -228,3 +228,8 @@ gcc -std=c11 -D_POSIX_C_SOURCE=200809L -DTHREADED \
 ## 相关学习记录
 
 更完整的线程、同步、TCP 与 `epoll` 学习过程见 [`linux-backend-learning-notes`](https://github.com/feiyun0310/linux-backend-learning-notes)。
+## 程序设计方法复盘
+
+项目已经按照“先数据结构、再全局状态与所有权、再线程框架和生命周期、最后业务逻辑”的方法，逐个整理 Client、NetServer、LoginServer、GameServer、DataServer 与 ZooKeeper 模块。文档同时标出了当前实现的不变量、连接重建方式和仍需改进的并发边界。
+
+[阅读完整的程序设计方法复盘](docs/README.md)
